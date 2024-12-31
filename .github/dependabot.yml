@@ -1,8 +1,13 @@
-
-
 version: 2
 updates:
-  - package-ecosystem: "github-actions" 
-    directory: "/" 
+  # Update GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+
+  # Update Cargo dependencies
+  - package-ecosystem: "cargo"
+    directory: "/"
     schedule:
       interval: "weekly"
