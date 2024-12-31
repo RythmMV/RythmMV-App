@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RythmMV | Build Loading...</title>
+    <style>
+        /* Basic styles for navbar */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        iframe {
+            width: 100%;
+            height: calc(100% - 5px); /* Adjust height to leave space for the navbar */
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <iframe id="webview" src="https://rythmmv.vercel.app/" title="RythmMV Website"></iframe>
+
+    <script>
+        // Listen for key press events
+        document.addEventListener("keydown", function(event) {
+            if (event.key === "a" || event.key === "A") {
+                window.history.back();  // Go back when 'A' is pressed
+            } else if (event.key === "s" || event.key === "S") {
+                window.history.forward();  // Go forward when 'S' is pressed
+            }
+        });
+
+    </script>
+</body>
+</html>
